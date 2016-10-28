@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run develop",
-    "develop": "./tasks/script.sh; ./tasks/other.sh;",
-    "serve": "browser-sync start --server ./dist;",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./tasks/dist.sh && parallelshell 'npm run script' 'npm run css' 'npm run serve'",
+    "script": "./tasks/script.sh",
+    "css": "./tasks/other.sh",
+    "serve": "browser-sync start --no-notify --no-open --server ./dist;"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.17.5",
-    "browserify": "^13.1.1",
     "chokidar-cli": "^1.2.0",
+    "parallelshell": "^2.0.0",
     "watchify": "^3.7.0"
   }
 }

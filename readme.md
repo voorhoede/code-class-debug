@@ -13,11 +13,12 @@ $ cd code-class-debug
 # install dependencies
 $ npm install
 
-# start dev server. http://localhost:3000
-$ npm run serve
-
-# start file watcher
+# start development and dev server. http://localhost:3000
 $ npm start
 ```
 
 Debug!
+
+More on the subject of debugging:
+
+[this article from google](https://developers.google.com/web/tools/chrome-devtools/javascript/add-breakpoints)

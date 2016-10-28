@@ -1,5 +1,5 @@
 #!/bin/bash
 glob='src/index.{html,css}';
 
-cp src/index.{html,css} ./dist;
+cp src/index.{html,css,json} ./dist;
 ./node_modules/.bin/chokidar "$glob" -c "cp $glob ./dist";
