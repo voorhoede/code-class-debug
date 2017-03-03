@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart":"npm run assets",
-    "start": "parallelshell 'npm run script' 'npm run watch'",
-    "poststart":"npm run serve",
+    "prestart": "npm run assets",
+    "start": "parallelshell 'npm run script' 'npm run watch' 'npm run serve'",
     "assets": "node ./tasks/assets.js",
     "script": "watchify --verbose --debug ./src/index.js -o ./dist/index.js -t [ babelify --presets [ es2015 ] ]",
     "serve": "browser-sync start --no-notify --no-open --server ./dist;",
@@ -25,6 +24,7 @@
     "watchify": "^3.9.0"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.0"
   }
 }
