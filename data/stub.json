@@ -1,12 +1,11 @@
-[
-  {
-    "id": 1,
-    "title": "foo"
-  },{
-    "id": 2,
-    "title": "bar"
-  },{
-    "id": 3,
+{
+  "1": {
     "title": "baz"
+  },
+  "2": {
+    "title": "bar"
+  },
+  "3": {
+    "title": "foo"
   }
-]
+}
